@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+   
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome/css/fontawesome-all.css">
+    
+    <link rel="stylesheet" href="css/animate/animate.css">
+    
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/staff.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>کارمندان</title>
+
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="img/Logo31.png" width="140px" height="42px" alt="Logo"></a>
+		
+		<div class="cd-search is-hidden">
+			<form action="#0">
+				<input type="search" placeholder="...جستجو">
+			</form>
+		</div>
+
+		<a href="#0" class="cd-nav-trigger"><span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+<!--
+				<li><a href="#0">Tour</a></li>
+				<li><a href="#0">Support</a></li>
+-->
+				<li class="has-children account">
+					<a class="haver" href="#0">
+						<img src="img/Logo4.png" alt="avatar">
+						حساب کاربری
+					</a>
+
+					<ul>
+
+						<li><a class="haver" href="#0">حساب من</a></li>
+						<li><a class="haver" href="#0">ویرایش</a></li>
+						<li><a class="haver" href="login.html">خروج</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+				<li class="cd-label">کارمندان</li>
+				<li class="has-children overview">
+				    
+					<a class="haver" href="dashboard"><i class="fas fa-tachometer-alt icon-sidebar-dash"></i>داشبورد</a>
+
+				</li>
+				<li class="has-children notifications">
+					<a class="haver" href="notification"><i class="far fa-bell icon-sidebar-not"></i>اعلان ها<span class="count">3</span></a>
+					
+					<ul>
+						<li><a class="haver" href="notification">همه اعلان ها</a></li>
+						<li><a class="haver" href="staffwarning">هشدار کارمندان</a></li>
+						<li><a class="haver" href="organizationwarning">هشدار سازمان</a></li>
+						<li><a class="haver" href="award">جایزه</a></li>
+					</ul>
+					
+				</li>
+
+				<li class="has-children comments">
+					<a class="haver" href="poll"><i class="far fa-comment-dots icon-sidebar-com"></i>نظرسنجی</a>
+					
+					<ul>
+						<li><a href="poll">سوال</a></li>
+						<li><a href="#0">نتیجه</a></li>
+					</ul>
+                </li>
+				
+				<li class="has-children staff active">
+                    <a class="haver" href="staff"><i class="fas fa-users icon-sidebar-staff"></i>کارمندان</a>
+				</li>
+				
+                <li class="has-children staff">
+					<a class="haver" href="organization"><i class="fas fa-sitemap icon-sidebar-staff"></i>سازمان</a>
+					
+					<ul>
+						<li><a href="organization">QR Code</a></li>
+						<li><a href="organizationresult">نتیجه</a></li>
+					</ul>
+				</li>
+				
+				<li class="has-children staff">
+					<a class="haver" href="login"><i class="fas fa-power-off icon-sidebar-staff"></i>خروج</a>
+				</li>
+			
+			</ul>
+
+<!--
+			<ul>
+				<li class="cd-label">Secondary</li>
+				<li class="has-children bookmarks">
+					<a href="#0">Bookmarks</a>
+					
+					<ul>
+						<li><a href="#0">All Bookmarks</a></li>
+						<li><a href="#0">Edit Bookmark</a></li>
+						<li><a href="#0">Import Bookmark</a></li>
+					</ul>
+				</li>
+				<li class="has-children images">
+					<a href="#0">Images</a>
+					
+					<ul>
+						<li><a href="#0">All Images</a></li>
+						<li><a href="#0">Edit Image</a></li>
+					</ul>
+				</li>
+
+				<li class="has-children users">
+					<a href="#0">Users</a>
+					
+					<ul>
+						<li><a href="#0">All Users</a></li>
+						<li><a href="#0">Edit User</a></li>
+						<li><a href="#0">Add User</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul>
+				<li class="cd-label">Action</li>
+				<li class="action-btn"><a href="#0">+ Button</a></li>
+			</ul>
+-->
+		</nav>
+
+		<div class="content-wrapper">
+		
+		    <div class="content">
+                <div class="container-fluid">
+                   
+                    <button id="staffadd" class="staffaddbutton">اضافه کردن کارمند</button>
+    
+                    <div id="staffaddform" class="staffaddformmodal">
+
+                        <div class="staffadd-form-content">
+
+                           <a href="#"><img src="img/user.png" class="avatar1"></a>
+
+                            <span class="closeBtn1">&times;</span>
+
+                            <form>
+
+                               <p>نام و نام خانوادگی</p>
+
+                               <input type="text" name="" id="staffInputFullName" placeholder="نام و نام خانوادگی را وارد کنید ">
+
+                               <p>سمت</p>
+
+                               <input type="text" name="" id="staffInputPosition" placeholder="سمت را وارد کنید">
+
+
+                                   <input type="button" name="" id="staffButtonAddStaffDone" value="اضافه کردن">
+
+
+                           </form>
+
+                        </div>
+
+                    </div>
+                   
+                    <div class="row" id="addstaffDivListStaff">
+
+                        <!--lis Employee ha-->
+
+
+
+
+                        <!--<div class="col-lg-3">-->
+                            <!--<div class="card">-->
+                                <!--<div class="card-header">-->
+                                    <!--<div class="card-icon">-->
+                                        <!--<i class="fas fa-user-tie"></i>-->
+                                    <!--</div>-->
+                                    <!--<p class="card-category">نام</p>-->
+                                    <!--<h3 class="card-title">جزییات-->
+                                    <!--</h3>-->
+                                <!--</div>-->
+                                <!--<div class="card-footer">-->
+                                    <!--<div class="stats">-->
+                                        <!--<i class="far fa-caret-square-down"></i>-->
+                                        <!--<a id="modalBtn1" href="#">جزییات بیشتر ...</a>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!---->
+
+
+                        <div id="modal" class="popup">
+
+
+                            <!--form e joziat e employee ha-->
+                            <div class="popupform">
+       
+                                       <span class="closeBtn">&times;</span>
+
+                                        <img src="img/user.png" class="avatar">
+
+                                        <h2 id="StafffullNamepopUpForm">نام و نام خانوادگی</h2><br><h3 id="StaffPositionpopUpForm">سمت</h3><br>
+
+                                           <form>
+                                               <div class="info wow animated fadeIn" data-wow-duraction="1s" data-wow-delay=".5s">
+
+                                                   <a>شماره کارمندی : <p id="StaffemployeeId">123456789</p></a><br><br>
+
+                                                   <a >رضایتمندی روزانه : <p id="StaffDayPercent">%60</p></a><br><br>
+
+                                                   <a >رضایتمندی ماهانه : <p id="StaffMonthPercent">%60</p></a><br><br>
+
+                                                   <a >رضایتمندی سالانه : <p id="StaffYearPercent">%60</p></a><br><br>
+
+                                               </div>
+
+                                               <a href="#">
+                                                   <input class="button" type="button" name="" value="مشتری">
+                                               </a><br>
+
+                                               <a href="#">
+                                                   <input class="button1" type="button" name="" value="همکار">
+                                               </a><br>
+
+                                               <a href="#">
+                                                   <input class="button2" type="button" name="" value="ویرایش">
+                                               </a>
+
+                                               <div class="qr">
+
+                                                   <img src="img/QRCode.png" width="100px" height="100px">
+
+                                               </div>
+
+                                                <div class="qr-print">
+                                                    <a href="#">
+                                                        <input class="button3" type="button" name="" value="پرینت">
+                                                    </a>
+                                                </div>
+               
+                                            </form>
+            
+                            </div>
+                                
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+		</div> <!-- .content-wrapper -->
+		
+	</main> <!-- .cd-main-content -->
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript"></script>
+    
+    <script src="js/canvasjs.min.js"></script>
+    <script src="js/jquery.canvasjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery.menu-aim.js"></script>
+    <script src="js/staff.js"></script>
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+.staffadd-form-modal {
+/*    display: none;*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.staffadd-form-content {
+    width: 320px;
+    height: 340px;
+    background: #243344;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 80px 30px;
+    box-shadow: 0px 0px 50px 5px #F4F5F6;
+    border-radius: 20px;
+}
+
+.staffadd-button {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #243344;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.staffadd-button:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.staffadd-form-content input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #FB2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.staffadd-form-content input[type="button"]:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.staffadd-form-content p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.staffadd-form-content input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.staffadd-form-content input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.closeBtn {
+    float: right;
+    position: relative;
+    left: 10px;
+    bottom: 75px;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}

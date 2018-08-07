@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.closeBtn {
+    float: right;
+    position: relative;
+    left: 10px;
+    bottom: 25px;
+    font-size: 30px;
+}
+
+.closeBtn:hover,.closeBtn:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popupform {
+/*    display: none;*/
+    width: 440px;
+    height: 440px;
+    background: #243344;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    box-shadow: 0px 0px 50px 5px #F4F5F6;
+    border-radius: 20px;
+}
+
+.popupform h2 {
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    top: -30px;
+    left: 35%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.popupform h3 {
+    display: inline-flex;
+    position: relative;
+    text-align: center;
+    top: -40px;
+    left: 35%;
+    margin-bottom: 0;
+}
+
+.popupform p {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0;
+    font-weight: 400;
+    float: right;
+}
+
+.info a {
+    color: #fff;
+    font-weight: 400;
+}
+
+.popupform input {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.popupform input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.qr {
+    position: relative;
+    bottom: 180px;
+    left: 250px;
+    
+}
+
+.qr-print {
+    position: relative;
+    bottom: 164px;
+    left: 210px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #FB2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.button1 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #229954;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.button1:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.button2 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #2E86C1;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.button2:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.button3 {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    color: #36475D;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.button3:hover {
+    cursor: pointer;
+    background: #FFC107;
+    color: #fff;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}

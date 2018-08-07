@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>وارد شدن</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+    
+    <div class="loginbox">
+        
+        <img src="img/user.png" class="avatar">
+        
+        <h1>وارد شدن</h1>
+           
+           <form>
+               
+               <p>نام کاربری</p>
+               
+               <input type="text" name="" id="logInInputUserName" placeholder="نام کاربری را وارد کنید">
+               
+               <p>رمزعبور</p>
+               
+               <input type="password" name="" id="logInInputPassword" placeholder="رمز عبور را وارد کنید">
+               
+
+                   <input type="button" id="logInButtonLogIn" name="" value="وارد شدن">
+
+               
+               <a href="lost"> رمز عبور خود را فراموش کرده اید؟ </a><br>
+               
+               <a href="register"> حساب کاربری ندارید؟ </a>
+               
+           </form>
+            
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/login.js"></script>
+
+
+</body>
+</html>

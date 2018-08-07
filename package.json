@@ -1,0 +1,27 @@
+{
+  "name": "rezayatmandi",
+  "version": "1.0.0",
+  "description": "Responsive Sidebar Navigation =========",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "http": "^0.0.0",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3",
+    "serve-static": "^1.13.2",
+    "socket.io": "^1.4.8",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node":"8.9.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
