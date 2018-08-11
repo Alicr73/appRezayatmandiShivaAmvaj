@@ -21,7 +21,7 @@ var idKarbar = '';
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/img", express.static(__dirname + '/img'));
 app.use("/js", express.static(__dirname + '/js'));
-var dburl = 'mongodb://alifattahi1373:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
+var dburl = 'mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
 
 io.on('connection', (socket) =>{
     console.log('new User Connected');
@@ -171,7 +171,7 @@ io.on('connection', (socket) =>{
     socket.on('listStaff',()=>{
 
         var MongoClient = require('mongodb').MongoClient;
-        var url = 'mongodb://alifattahi1373:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
+        var url = 'mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
 
         MongoClient.connect(url, function(err, db) {
             if (err) throw err;
@@ -188,7 +188,7 @@ io.on('connection', (socket) =>{
     socket.on('logIn',(userDaryaftiFind,password)=>{
         console.log('usere daryafti'+userDaryaftiFind +'   '+password);
 
-        MongoClient.connect('mongodb://alifattahi1373:alicr1373@ds113452.mlab.com:13452/apprezayatmandi',(err,db)=>{
+        MongoClient.connect('mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi',(err,db)=>{
             if (err){
                 return console.log('unable to connect to mongo db server');
             }
