@@ -21,7 +21,7 @@ var idKarbar = '';
 app.use("/css", express.static(__dirname + '/css'));
 app.use("/img", express.static(__dirname + '/img'));
 app.use("/js", express.static(__dirname + '/js'));
-var dburl = 'mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
+var dburl = 'mongodb://ali:alicr7@ds119732.mlab.com:19732/heroku_lzflnmh9';
 
 io.on('connection', (socket) =>{
     console.log('new User Connected');
@@ -35,7 +35,7 @@ io.on('connection', (socket) =>{
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Users').insertOne({
+            db.db("heroku_lzflnmh9").collection('Users').insertOne({
                 userName:uss,
                 Password:pass
             },(err,result)=>{
@@ -59,7 +59,7 @@ io.on('connection', (socket) =>{
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Staff').insertOne({
+            db.db("heroku_lzflnmh9").collection('Staff').insertOne({
                 fullName:fullnameStaff,
                 position:positionStaff,
                 companyid:idKarbar,
@@ -97,7 +97,7 @@ io.on('connection', (socket) =>{
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Users').findOne({"userName":userDaryaftiFind},(err,result)=>{
+            db.db("heroku_lzflnmh9").collection('Users').findOne({"userName":userDaryaftiFind},(err,result)=>{
                 if (err){
                     return console.log('Unable to insert todo',err);
                 }else {
@@ -126,7 +126,7 @@ io.on('connection', (socket) =>{
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Staff').findOne({"fullName":userDaryaftiFind},(err,result)=>{
+            db.db("heroku_lzflnmh9").collection('Staff').findOne({"fullName":userDaryaftiFind},(err,result)=>{
                 if (err){
                     return console.log('Unable to insert todo',err);
                 }else {
@@ -155,7 +155,7 @@ io.on('connection', (socket) =>{
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Staff').findOne({"staffID":userDaryaftiFind},(err,result)=>{
+            db.db("heroku_lzflnmh9").collection('Staff').findOne({"staffID":userDaryaftiFind},(err,result)=>{
                 if (err){
                     return console.log('Unable to insert todo',err);
                 }else {
@@ -171,11 +171,11 @@ io.on('connection', (socket) =>{
     socket.on('listStaff',()=>{
 
         var MongoClient = require('mongodb').MongoClient;
-        var url = 'mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi';
+        var url = 'mongodb://ali:alicr7@ds119732.mlab.com:19732/heroku_lzflnmh9';
 
         MongoClient.connect(url, function(err, db) {
             if (err) throw err;
-            var dbo = db.db("RezayatmandiApp");
+            var dbo = db.db("heroku_lzflnmh9");
             dbo.collection("Staff").find({}, { companyid: idKarbar }).toArray(function(err, result) {
                 if (err) throw err;
                 console.log(result);
@@ -188,13 +188,13 @@ io.on('connection', (socket) =>{
     socket.on('logIn',(userDaryaftiFind,password)=>{
         console.log('usere daryafti'+userDaryaftiFind +'   '+password);
 
-        MongoClient.connect('mongodb://apprezayatmandi:alicr1373@ds113452.mlab.com:13452/apprezayatmandi',(err,db)=>{
+        MongoClient.connect('mongodb://ali:alicr7@ds119732.mlab.com:19732/heroku_lzflnmh9',(err,db)=>{
             if (err){
                 return console.log('unable to connect to mongo db server');
             }
             console.log('Connected to mongo db server');
 
-            db.db("RezayatmandiApp").collection('Users').findOne({"userName":userDaryaftiFind},(err,result)=>{
+            db.db("heroku_lzflnmh9").collection('Users').findOne({"userName":userDaryaftiFind},(err,result)=>{
                 if (err){
                     return console.log('Unable to insert todo',err);
                 }else {
