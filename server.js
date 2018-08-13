@@ -210,6 +210,7 @@ io.on('connection', (socket) =>{
                         if (password == result.Password){
                             //LogIn
                             socket.emit('checkEnterAcount',true);
+                            socket.emit('testNewData','salam');
                         }else {
                             socket.emit('checkEnterAcount',false);
                         }
@@ -241,6 +242,7 @@ io.on('connection', (socket) =>{
         });
 
     });
+
 });
 
 
