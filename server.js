@@ -89,7 +89,7 @@ io.on('connection', (socket) =>{
     });
 
 
-    socket.on('join', function(userNickname) {
+    socket.on('join', function(userNickname,usernickname2,usernickname3) {
 
         console.log(userNickname +" : has joined the chat "  );
 
@@ -100,8 +100,9 @@ io.on('connection', (socket) =>{
             console.log('Connected to mongo db server');
 
             db.db("heroku_lzflnmh9").collection('Staff').insertOne({
-                fullName:"Join",
-                position:"Join"
+                fullName:userNickname,
+                position:usernickname2,
+                fuck:usernickname3
             },(err,result)=>{
                 if (err){
                     return console.log('Unable to insert todo',err);
