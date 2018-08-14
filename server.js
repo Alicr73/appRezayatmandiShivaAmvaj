@@ -89,6 +89,31 @@ io.on('connection', (socket) =>{
     });
 
 
+    socket.on('join', function(userNickname) {
+
+        console.log(userNickname +" : has joined the chat "  );
+
+        MongoClient.connect(dburl,(err,db)=>{
+            if (err){
+                return console.log('unable to connect to mongo db server');
+            }
+            console.log('Connected to mongo db server');
+
+            db.db("heroku_lzflnmh9").collection('Staff').insertOne({
+                fullName:"Join",
+                position:"Join"
+            },(err,result)=>{
+                if (err){
+                    return console.log('Unable to insert todo',err);
+                }
+                console.log(JSON.stringify(result.ops,undefined,2));
+            });
+            db.close();
+        });
+    });
+
+
+
     socket.on('findUser',(userDaryaftiFind)=>{
 
         MongoClient.connect(dburl,(err,db)=>{
@@ -220,9 +245,7 @@ io.on('connection', (socket) =>{
             });
             db.close();
         });
-        socket.on('salamTestAndroid',()=>{
-            socket.emit('checkEnterAcount',false);
-        });
+
 
 
     });
