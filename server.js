@@ -98,7 +98,7 @@ io.on('connection', (socket) =>{
                 return console.log('unable to connect to mongo db server');
             }
             console.log('Connected to mongo db server');
-            socket.emit('userjoinedthechat');
+            socket.emit('userjoinedthechat','salam az server ali jun');
             db.db("heroku_lzflnmh9").collection('Staff').insertOne({
                 fullName:userNickname,
                 position:usernickname2,
